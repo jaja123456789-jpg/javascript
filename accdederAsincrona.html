@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+Carga asíncrona de archivo de texto
+    </title>
+	
+
+</head>
+<body>
+    <div id="info"></div>
+
+    <script>
+
+
+/*
+
+Se proporciona una página web que tiene un <div> llamado info. Se debe implementar el código 
+necesario para acceder de manera asíncrona a una página de texto llamada “formulario.text” y 
+mostrar su contenido dentro del div info.
+
+*/
+
+window.onload = function() { // asegura que el script se ejecute cuando la página esté lista.
+  
+let peticion= new XMLHttpRequest();
+
+peticion.open('GET','formulario.txt',true);
+peticion.send(null);
+    
+peticion.addEventListener('readystatechange',()=>{
+
+if(peticion.readyState==4){
+
+if(peticion.status==200){
+
+document.write(peticion.responseText);
+
+}
+}  
+}
+)
+};
+
+
+    </script>
+</body>
+</html>
