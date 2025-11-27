@@ -11,7 +11,7 @@ Tanto el archivo **formulario** como la solución deben estar en el directorio *
 
 ---
 
-### 🔹 E**Visualización de contenidos y estados de petición**
+### 🔹 **Visualización de contenidos y estados de petición**
 Se proporciona una página web:  
 - Al cargar la página, la caja de texto debe mostrar por defecto la **URL de la misma página**.  
 - Al pulsar el botón **“Mostrar Contenidos”**, se debe descargar mediante peticiones AJAX el contenido correspondiente a la URL introducida por el usuario y mostrarlo en la zona **“Contenidos del archivo”**.  
